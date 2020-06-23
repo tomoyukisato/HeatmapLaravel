@@ -17,9 +17,9 @@ class CreatePagesTable extends Migration
             $table->bigIncrements('id');
             $table->BigInteger('site_id');
             $table->text('page_url');
-            $table->text('pc_screenshot_imp');
-            $table->text('tab_screenshot_imp');
-            $table->text('sp_screenshot_imp');
+            $table->text('pc_screenshot_imp')->nullable();
+            $table->text('tab_screenshot_imp')->nullable();
+            $table->text('sp_screenshot_imp')->nullable();
             $table->timestamps();
         });
     }

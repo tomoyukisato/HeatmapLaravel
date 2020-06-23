@@ -9,6 +9,10 @@ use App\Http\Requests\SiteRequest;
 
 class SiteController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
     /**
      * Display a listing of the resource.
      *
@@ -41,12 +45,13 @@ class SiteController extends Controller
         
         $result = Site::create([
             "title"=>$request->title,
-            "page_url"=>$request->page_url,
+            "site_url"=>$request->site_url,
         ]);
-        foreach($request->pages as $page){
+        // var_dump($result->id);
+        foreach($request->page_urls as $page){
             Page::create([
                 "site_id"=>$result->id,
-                "page_url"=>$request->page_url,
+                "page_url"=>$page,
             ]);
         }
 

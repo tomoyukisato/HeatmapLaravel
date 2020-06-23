@@ -102,7 +102,7 @@ function showScreenTimeHeatmap(id,device,width,height){
     var param = "?id=" + id+ "&device=" + device+ "&max_height=" + img_height;
     console.log(param);
     
-    xhr.open('GET', 'http://54.250.233.86/api/screen_time_heatmap'+param, true);
+    xhr.open('GET', 'http://heatmap.local/api/screen_time_heatmap'+param, true);
     xhr.onreadystatechange = function(){
         if (this.readyState === 4 && this.status === 200) {
             var id = this.response.id;
@@ -143,7 +143,7 @@ function showHeatmap(id,device,width,height){
     var param = "?id=" + id+ "&device=" + device+ "&max_height=" + height+ "&max_width=" + width;
     console.log(param);
     
-    xhr.open('GET', 'http://54.250.233.86/api/click_heatmap'+param, true);
+    xhr.open('GET', 'http://heatmap.local/api/click_heatmap'+param, true);
     xhr.onreadystatechange = function(){
         if (this.readyState === 4 && this.status === 200) {
             var id = this.response.id;
@@ -191,7 +191,7 @@ function showHeatmap(id,device,width,height){
 //     // });
 //     let xhr = new XMLHttpRequest(); 
 //     var param = "x_cord=" + x+ "&y_cord=" + y + "&page=" + page + "&device=" + device+ "&max_height=" + max_height+ "&max_width=" + max_width;
-//     xhr.open('GET', 'http://54.250.233.86/api/click?'+param, true);
+//     xhr.open('GET', 'http://heatmap.local/api/click?'+param, true);
 //     xhr.onreadystatechange = function(){
 //         if (this.readyState === 4 && this.status === 200) {
 //             var id = this.response.id;

@@ -18,6 +18,7 @@ class Cors
         \Log::info($request);
         return $next($request)
         ->header('Access-Control-Allow-Origin', 'http://surprizz2nd.com')
+        ->header('Access-Control-Allow-Origin', 'http://localhost:8888')
         ->header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS')
         ->header('Access-Control-Allow-Credentials', 'true')
         ->header('Access-Control-Allow-Headers', 'Content-Type');

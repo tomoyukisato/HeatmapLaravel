@@ -25,9 +25,9 @@ class SiteRequest extends FormRequest
     {
         return [
             'title' => 'required|max:255',
-            'page_url' => 'required|url',
-            'pages' => 'required|array',
-            'pages.*' => 'url',
+            'site_url' => 'required|url',
+            'page_urls' => 'required|array',
+            'page_urls.*' => 'url',
         ];
     }
 }
